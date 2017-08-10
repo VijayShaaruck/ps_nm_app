@@ -7,10 +7,10 @@
         <br> <button (click)="pushItem()">add</button>
     </div>
     <ul>
-        <li *ngFor='let i of items; let ind=index'>
+        <li *ngFor='let i of results; let ind=index'>
             {{i}}
+            <input *ngIf="isNull[ind]" placeholder="IP" class="addText">
             <span (click)="removeItem(ind)">&#x2716;</span>
-
             <span>&nbsp;</span>
             <span>&#x2714;</span>
         </li>
