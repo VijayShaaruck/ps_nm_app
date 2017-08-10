@@ -6,9 +6,9 @@
         <div class="col-md-offset-5 col-md-3">
             <div class="form-login">
                 <h4>Request Network Access.</h4>
-                <input type="text" id="name" class="form-control input-sm chat-input" placeholder="Name" />
+                <input [(ngModel)]="name" type="text" id="name" class="form-control input-sm chat-input" placeholder="Name" #ref/>
                 <br>
-                <input type="text" id="mac" class="form-control input-sm chat-input" placeholder="MAC Address" />
+                <input [(ngModel)]="mac" type="text" id="mac" class="form-control input-sm chat-input" placeholder="MAC Address" #ref />
                 <br>
                 <div class="wrapper">
                     <span class="group-btn">     

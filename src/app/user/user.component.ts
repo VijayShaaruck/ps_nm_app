@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Http } from '@angular/http';
+
 
 @Component({
   selector: 'app-user',
@@ -8,11 +10,15 @@ import { Router } from '@angular/router';
 })
 export class UserComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,private http:Http) { }
 
   ngOnInit() {
   }
-  public go(){
-            this.router.navigate(['./admin']);
+go=function(){
+          const body={name:this.name,mac:this.mac};
+          this.http
+          .post('http://localhost:8000/add', body)
+          .subscribe();
+          //this.router.navigate(['./admin']);
   }
 }
