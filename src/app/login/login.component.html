@@ -1,0 +1,12 @@
+<marquee>Welcome to Placement Season</marquee>
+Click <a href="/user">here</a> if you are a user<br> <br>Please login if you are an Admin<br><br>
+<input [(ngModel)]="username" type="text" id="name" class="form-control input-sm chat-input" placeholder="Username" />
+<br>
+<input [(ngModel)]="password" type="password" id="mac" class="form-control input-sm chat-input" placeholder="Password" />
+<br>
+<div class="wrapper">
+    <span class="group-btn">     
+                <a  class="btn btn-primary btn-md" (click)="login()" >Login</a>
+    </span>
+</div>
+{{error}}
