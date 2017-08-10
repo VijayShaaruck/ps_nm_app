@@ -1,3 +1,20 @@
-<p>
-    admin works!
-</p>
+<div class="main">
+    <h1> User's List</h1>
+    <div class="addItem">
+        <input [(ngModel)]="newItem" placeholder="User" class="addText">
+        <input [(ngModel)]="newItem1" placeholder="MAC" class="addText">
+        <input [(ngModel)]="newItem2" placeholder="IP" class="addText">
+        <br> <button (click)="pushItem()">add</button>
+    </div>
+    <ul>
+        <li *ngFor='let i of items; let ind=index'>
+            {{i}}
+            <span (click)="removeItem(ind)">&#x2716;</span>
+
+            <span>&nbsp;</span>
+            <span>&#x2714;</span>
+        </li>
+
+    </ul>
+
+</div>

@@ -19,6 +19,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     routes
   ],
   providers: [],
