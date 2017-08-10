@@ -9,10 +9,10 @@
     <ul>
         <li *ngFor='let i of results; let ind=index'>
             {{i}}
-            <input *ngIf="isNull[ind]" placeholder="IP" class="addText">
+            <input [(ngModel)]="ip[ind]" *ngIf="isNull[ind]" placeholder="IP" class="addText">
             <span (click)="removeItem(ind)">&#x2716;</span>
             <span>&nbsp;</span>
-            <span>&#x2714;</span>
+            <span *ngIf="isNull[ind]" (click)="addIP(ind)">&#x2714;</span>
         </li>
 
     </ul>
